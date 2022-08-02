@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body ng-app="myapp" ng-controller="myctrl">
+    <div class="cen">
+        <form name="myform" novalidate ng-submit="register()">
+            <h1>EMPLOYEE SIGNIN PORTAL</h1>
+            <p ng-show="msg">{{msg}}</p>
+
+            <input type="text" name="name" ng-model="name" required placeholder="FULL NAME"><br>
+            <span ng-show="myform.$submitted||myform.name.$dirty">
+                <span class="error" ng-show="myform.name.$error.required">NAME REQUIRED</span>
+
+                
+            </span><br><br>
+
+            <input type="email" name="email" ng-model="email" required placeholder="EMAIL"><br>
+            <span ng-show="myform.$submitted||myform.email.$dirty">
+                <span class="error" ng-show="myform.email.$error.required">ENTER CORRECT EMAIL</span>
+            </span><br><br>
+
+            <input type="number" name="phone" ng-model="phone" required placeholder="PHONE NUMBER"> <br>
+            <span ng-show="myform.$submitted||myform.phone.$dirty">
+                    <span class="error" ng-show="myform.phone.$error.required">PHONE NUMBER REQUIRED</span>
+            </span><br><br>
+
+
+            <button type="submit">SUBMIT</button>
+        </form>
+    </div>
+
+
+
+    <script>
+        angular.module("myapp",[]).controller("myctrl",function($scope){
+            $scope.register=function(){
+            $scope.msg="WELCOME !"+$scope.name +"YOU ARE SIGNED IN"
+        }
+        })
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,55 @@
+body{
+    background-color: white;
+}
+.cen{
+    background-color:orange;
+    color: blue;
+    width:600px;
+    height:400px;
+    font-weight: bold;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 60px;
+    border-radius: 6px;
+    border-color: blue;
+    border-width: 5px;
+    border-style:dotted;
+   
+   
+}
+.cen h1{
+    text-align: center;
+    border-bottom-style: double;
+    color: white;
+}
+.cen input{
+    padding:8px;
+    text-align: center;
+    margin-left: 200px;
+    background-color: rgb(224, 233, 238);
+    border-radius: 5px;
+    border-style: none;
+    color: blue;
+}
+.cen button{
+    background-color: white;
+    color: blue;
+    padding:8px;
+    border-radius: 5px;
+    margin-left: 250px;
+    border-color:white;
+}
+.cen button:hover{
+    background-color: rgb(241, 187, 68);
+    color:red;
+}
+ .error{
+    color:red;
+    text-align: center;
+    margin-left:200px;
+    margin-top: 18px;
+}
+.cen p{
+    color:darkgreen;
+    margin-left: 140px;
+}
